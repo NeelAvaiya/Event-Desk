@@ -1,5 +1,5 @@
-import { AppError } from "../errors/AppError.js";
-import { logger } from "../lib/logger.js";
+import { AppError } from "../libs/ApiError.js";
+import { logger } from "../config/logger.js";
 
 export function errorHandler(err, req, res, next) {
   if (err instanceof AppError) {

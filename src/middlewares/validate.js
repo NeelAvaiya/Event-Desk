@@ -1,4 +1,4 @@
-import AppError from "../utils/AppError.js";
+import { AppError } from "../libs/ApiError.js";
 
 export const validate = (schemas) => (req, res, next) => {
   for (const key of ["body", "query", "params"]) {
@@ -16,7 +16,7 @@ export const validate = (schemas) => (req, res, next) => {
       );
     }
 
-    req[key] = result.data;
+    res.locals[key] = result.data;
   }
 
   next();

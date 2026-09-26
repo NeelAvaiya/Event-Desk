@@ -1,5 +1,5 @@
 import * as eventRepository from "./event.repository.js";
-import AppError from "../../utils/AppError.js";
+import { AppError } from "../../libs/ApiError.js";
 
 export const listEvents = async (filter = {}, options = {}) => {
   return eventRepository.findMany(filter, options);
