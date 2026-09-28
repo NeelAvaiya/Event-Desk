@@ -15,6 +15,7 @@ app.use(healthRoutes);
 
 app.use("/api/v1/events", eventRoutes);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/login", authRoutes);
 
 app.use(errorHandler);
 
